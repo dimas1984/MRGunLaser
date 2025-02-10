@@ -63,6 +63,7 @@
     <Compile Include="Assets\DestructibleObject.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\LaserShooter.cs" />
+    <Compile Include="Assets\RuntimeNavmeshBuilder.cs" />
     <Compile Include="Assets\spawner.cs" />
     <Compile Include="Assets\RayGun.cs" />
     <Compile Include="Assets\Mummy.cs" />
