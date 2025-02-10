@@ -65,6 +65,7 @@
     <Compile Include="Assets\LaserShooter.cs" />
     <Compile Include="Assets\spawner.cs" />
     <Compile Include="Assets\RayGun.cs" />
+    <Compile Include="Assets\Mummy.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
