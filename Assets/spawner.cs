@@ -19,7 +19,7 @@ public class spawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -30,19 +30,21 @@ public class spawner : MonoBehaviour
 
 
         timer += Time.deltaTime;
-        if(timer> spawanTimer )
+        if (timer > spawanTimer)
         {
-            SpawnMummy();
+           // SpawnMummy();
+            SpawnMonster();
             timer -= spawanTimer;
         }
     }
 
-    public void SpawnMummy() { 
+    public void SpawnMummy()
+    {
 
-        MRUKRoom room =MRUK.Instance.GetCurrentRoom();
+        MRUKRoom room = MRUK.Instance.GetCurrentRoom();
 
         int currentTry = 0;
-        while( currentTry < spawnTry )
+        while (currentTry < spawnTry)
         {
             bool hasFoundPosition = room.GenerateRandomPositionOnSurface(MRUK.SurfaceType.VERTICAL, minEdgeDistance, LabelFilter.Included(spawnlabels), out Vector3 pos, out Vector3 normal);
 
@@ -61,6 +63,7 @@ public class spawner : MonoBehaviour
 
         }
 
+
         /*
             Vector3 randomPosition = Random.insideUnitSphere*3;
             randomPosition.y = 0;
@@ -68,5 +71,30 @@ public class spawner : MonoBehaviour
             Instantiate( prefabSpawner,randomPosition,Quaternion.identity );*/
 
 
+    }
+    public void SpawnMonster()
+    {
+
+        MRUKRoom room = MRUK.Instance.GetCurrentRoom();
+
+        int currentTry = 0;
+        while (currentTry < spawnTry)
+        {
+            bool hasFoundPosition = room.GenerateRandomPositionOnSurface(MRUK.SurfaceType.VERTICAL, minEdgeDistance, LabelFilter.Included(spawnlabels), out Vector3 pos, out Vector3 normal);
+
+            if (hasFoundPosition)
+            {
+                Vector3 randomPositionNormalOffset = pos + normal * normalOffset;
+                randomPositionNormalOffset.y = 0;
+
+                Instantiate(prefabSpawner, randomPositionNormalOffset, Quaternion.identity);
+                return;
+            }
+            else
+            {
+                currentTry++;
+            }
+
+        }
     }
 }

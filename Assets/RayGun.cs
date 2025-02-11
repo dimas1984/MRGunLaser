@@ -48,12 +48,22 @@ public class RayGun : MonoBehaviour
             //stop
             endPoint = hit.point;
             //Debug.Log("ketembak");
-           
-            Quaternion rayImpactRotation = Quaternion.LookRotation(-hit.normal);
 
-            GameObject rayImpact = Instantiate(RayImpactPrefab, hit.point, rayImpactRotation);
+            Mummy mummy = hit.transform.GetComponentInParent<Mummy>();
 
-            Destroy(rayImpact, 1);
+            if (mummy)
+            {
+               // mummy.Kill();
+                mummy.Destory();
+            }
+            else {
+                Quaternion rayImpactRotation = Quaternion.LookRotation(-hit.normal);
+
+                GameObject rayImpact = Instantiate(RayImpactPrefab, hit.point, rayImpactRotation);
+
+                Destroy(rayImpact, 1);
+            }
+            
 
         }
         else

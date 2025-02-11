@@ -96,6 +96,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9500000, guid: 3353e4f866c39d043a315b41717c9bb7, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: ad8c5523f2b576b418ee719654ad4604, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -108,7 +112,17 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 5031892580884222837}
+    - targetCorrespondingSourceObject: {fileID: 100070, guid: 3353e4f866c39d043a315b41717c9bb7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3806259566551931454}
   m_SourcePrefab: {fileID: 100100000, guid: 3353e4f866c39d043a315b41717c9bb7, type: 3}
+--- !u!95 &2082277387610680345 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 9500000, guid: 3353e4f866c39d043a315b41717c9bb7,
+    type: 3}
+  m_PrefabInstance: {fileID: 2082277387617966457}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2082277387617829823 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400070, guid: 3353e4f866c39d043a315b41717c9bb7,
@@ -155,5 +169,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a66a344d5bc656b42b92c9dda555e745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 2082277387610680345}
   agent: {fileID: 2818868077558555082}
-  speed: 1
+  speed: 0.1
+--- !u!136 &3806259566551931454
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2082277387618066335}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.7406288
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.37030607, z: 0}

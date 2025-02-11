@@ -65,6 +65,7 @@
     <Compile Include="Assets\LaserShooter.cs" />
     <Compile Include="Assets\RuntimeNavmeshBuilder.cs" />
     <Compile Include="Assets\spawner.cs" />
+    <Compile Include="Assets\Monster.cs" />
     <Compile Include="Assets\RayGun.cs" />
     <Compile Include="Assets\Mummy.cs" />
   </ItemGroup>

@@ -1161,6 +1161,15 @@ MonoBehaviour:
     Scaling: 0
     Alignment: 0
     IgnorePrefabSize: 0
+  - Labels: 1
+    Prefabs:
+    - {fileID: 819337040959568446, guid: be7c508686c457c4284fda9254f63777, type: 3}
+    PrefabSelection: 0
+    MatchAspectRatio: 0
+    CalculateFacingDirection: 0
+    Scaling: 0
+    Alignment: 0
+    IgnorePrefabSize: 0
 --- !u!114 &734277483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1979,7 +1988,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2017974762
 MonoBehaviour:
   m_ObjectHideFlags: 0
